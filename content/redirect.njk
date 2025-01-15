@@ -1,0 +1,10 @@
+---
+permalink: /_redirects
+layout: false
+eleventyExcludeFromCollections: true
+---
+{% for dis in redirect.item %}
+{{dis.from}}    {{dis.to}}
+{% endfor %}
+
+
