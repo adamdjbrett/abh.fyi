@@ -1,0 +1,116 @@
+local_backend: true
+backend:
+  name: git-gateway
+#  repo: githubuser/repo
+  branch: main 
+media_folder: 'static/img'
+collections:
+  - name: redirects"
+    label: "Redirect Setup"
+    extension: "yml"
+    editor:
+      preview: false
+    files:
+     - file: "_data/redirect.yaml"
+       label: "Update Redirect URL"
+       name: "redirect"
+       widget: list
+       fields:
+          - name: 'item'
+            label: 'Redirect Link URL' 
+            widget: 'list'
+            fields:
+             - { name: 'from', label: 'From URL Link', widget: 'string' }
+             - { name: 'to', label: 'To URL Link', widget: 'string'}
+  - name: "homes"
+    label: "Home Page"
+    extension: "md"
+    editor:
+      preview: false
+    files:
+     - file: "content/index.md"
+       label: "Update Home Page Area"
+       name: "home"
+       widget: list
+       fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Description', name: 'description', widget: 'text' }
+          - { label: 'Image', name: 'image', widget: 'image' }
+          - { label: 'Link', name: 'link', widget: 'string' }
+          - { label: 'Text Information', name: 'text', widget: 'text' }
+          - name: 'link_list'
+            label: 'Link URL List' 
+            widget: 'list'
+            fields:
+             - { name: 'name', label: 'Title', widget: 'string' }
+             - { name: 'url', label: 'URL Link', widget: 'string'}
+  - name: 'pages'
+    label: 'Pages'
+    folder: 'content/pages'
+    slug: '{{slug}}'
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { name: 'title', label: 'Title', widget: 'string' }
+      - { name: 'description', label: 'Description', widget: 'text' }
+      - { name: 'image', label: 'Image', widget: 'image' }
+      - { name: 'permalink', label: 'Permalink URL', widget: 'string' }
+      - { name: 'body', label: 'Body', widget: 'markdown' } 
+  - name: "setups"
+    label: "Setup"
+    extension: "yml"
+    editor:
+      preview: false
+    files:
+     - file: "_data/metadata.yaml"
+       label: "Update Configuration"
+       name: "config"
+       widget: list
+       fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Description', name: 'description', widget: 'text' }
+          - { label: 'URL', name: 'url', widget: 'string' }
+          - { label: 'Favicon', name: 'favicon', widget: 'image' }
+          - { label: 'Language', name: 'language', widget: 'string' }
+          - { label: 'locale', name: 'locale', widget: 'string' }
+          - name: 'metasocial'
+            label: 'Meta Social' 
+            widget: 'object'
+            fields:
+             - { name: 'image', label: 'Image', widget: 'image' }
+             - { name: 'facebook', label: 'URL Link', widget: 'string'}
+             - { name: 'twitteruser', label: 'Twitter User', widget: 'string'}
+             - { name: 'twitter', label: 'Twitter URL', widget: 'string'}
+          - { label: 'Navbar Title', name: 'navbar_title', widget: 'string' }
+          - { label: 'Image', name: 'image', widget: 'image' }
+          - name: 'navbar'
+            label: 'Navbar List' 
+            widget: 'list'
+            fields:
+             - { name: 'nav', label: 'Title', widget: 'string' }
+             - { name: 'link', label: 'URL Link', widget: 'string'}
+          - name: 'footer'
+            label: 'Footer Icon' 
+            widget: 'list'
+            fields:
+             - { name: 'icon', label: 'Icon', widget: 'string' }
+             - { name: 'link', label: 'URL Link', widget: 'string'}
+             - { name: 'title', label: 'Title', widget: 'string'}
+          - name: 'copyrights'
+            label: 'Copyrights' 
+            widget: 'object'
+            fields:
+             - { name: 'text1', label: 'Text 1', widget: 'string' }
+             - { name: 'text2', label: 'Text 2', widget: 'string' }
+             - { name: 'text2_link', label: 'Text 2 URL Link', widget: 'string' }
+             - { name: 'text3', label: 'Text 3', widget: 'string' }
+             - { name: 'text4', label: 'Text 4', widget: 'string' }
+             - { name: 'text4_link', label: 'Text 4 URL Link', widget: 'string' }
+          - name: 'author'
+            label: 'Author' 
+            widget: 'object'
+            fields:
+             - { name: 'name', label: 'Name', widget: 'string' }
+             - { name: 'email', label: 'Email', widget: 'string'}
+             - { name: 'url', label: 'URL Link', widget: 'string'}
