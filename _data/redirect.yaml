@@ -9,7 +9,3 @@ item:
     to: https://example.com
   - from: /cal2/
     to: https://calendly.com/ahumphries-mtsu
-  - from: /dal2/
-    to: https://example.com
-  - from: /test/
-    to: https://mtsu.edu
