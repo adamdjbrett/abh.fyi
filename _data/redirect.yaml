@@ -1,14 +1,15 @@
 item:
- - from: /cal/
-   to: https://calendly.com/ahumphries-mtsu
- - from: /abh/
-   to: https://w1.mtsu.edu/faculty/andrew-humphries
- - from: /cal1/
-   to: https://calendly.com/ahumphries-mtsu
- - from: /dal1/
-   to: https://example.com
- - from: /cal2/
-   to: https://calendly.com/ahumphries-mtsu
- - from: /dal2/
-   to: https://example.com
-
+  - from: /cal/
+    to: https://calendly.com/ahumphries-mtsu
+  - from: /abh/
+    to: https://w1.mtsu.edu/faculty/andrew-humphries
+  - from: /cal1/
+    to: https://calendly.com/ahumphries-mtsu
+  - from: /dal1/
+    to: https://example.com
+  - from: /cal2/
+    to: https://calendly.com/ahumphries-mtsu
+  - from: /dal2/
+    to: https://example.com
+  - from: /test/
+    to: https://mtsu.edu
